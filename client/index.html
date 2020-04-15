@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con Socket.io</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <h1>Chat utilizando socket.io</h1>
+                <hr>
+            </div>
+            <br>
+            <div class="col-6">
+                <form onsubmit="return addMessage(this);" >
+                    <input type="text"  class="form-control"  id="nickname" placeholder="Nickname" required>
+                    <textarea id="text" class="form-control" rows="2" placeholder="Mensaje" required></textarea>
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                </form>
+            </div>
+            <div class="col-6 alert alert-dismissible alert-primary ">
+                <div id="message">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
